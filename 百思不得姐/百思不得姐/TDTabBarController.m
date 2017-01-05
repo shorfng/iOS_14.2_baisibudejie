@@ -7,6 +7,11 @@
 //
 
 #import "TDTabBarController.h"
+#import "TDEssenceViewController.h"
+#import "TDNewViewController.h"
+#import "TDFriendTrendsViewController.h"
+#import "TDMeViewController.h"
+#import "TDTabBar.h"
 
 @interface TDTabBarController ()
 @end
@@ -32,30 +37,33 @@
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
     
-    
     // 添加子控制器
-    [self setupChildVc:[[UIViewController alloc]init]
+    [self setupChildVc:[[TDEssenceViewController alloc]init]
                  title:@"精华"
                  image:@"tabBar_essence_icon"
          selectedImage:@"tabBar_essence_click_icon"];
     
     
-    [self setupChildVc:[[UITableViewController alloc]initWithStyle:UITableViewStyleGrouped]
+    [self setupChildVc:[[TDNewViewController alloc]init]
                  title:@"最新"
                  image:@"tabBar_new_icon"
          selectedImage:@"tabBar_new_click_icon"];
     
     
-    [self setupChildVc:[[UITableViewController alloc]initWithStyle:UITableViewStylePlain]
+    [self setupChildVc:[[TDFriendTrendsViewController alloc]init]
                  title:@"关注"
                  image:@"tabBar_friendTrends_icon"
          selectedImage:@"tabBar_friendTrends_click_icon"];
     
     
-    [self setupChildVc:[[UITableViewController alloc]init]
+    [self setupChildVc:[[TDMeViewController alloc]init]
                  title:@"我"
                  image:@"tabBar_me_icon"
-         selectedImage:@"tabBar_me_icon"];
+         selectedImage:@"tabBar_me_click_icon"];
+    
+    // 更换tabBar
+    [self setValue:[[TDTabBar alloc] init] forKeyPath:@"tabBar"];
+
 }
 
 #pragma mark - 初始化子控制器
