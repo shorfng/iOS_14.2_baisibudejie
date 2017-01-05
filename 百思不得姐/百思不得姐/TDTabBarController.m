@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // 设置未选中状态下 title 的属性
     NSMutableDictionary *attrs =[NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];   // 文字大小
@@ -34,33 +34,44 @@
     
     
     // 添加子控制器
-    UIViewController *vc1 = [[UIViewController alloc]init];
-    vc1.tabBarItem.title = @"精华";
-    vc1.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
-    vc1.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_essence_click_icon"];
-    vc1.view.backgroundColor = [UIColor redColor];
-    [self addChildViewController:vc1];
+    [self setupChildVc:[[UIViewController alloc]init]
+                 title:@"精华"
+                 image:@"tabBar_essence_icon"
+         selectedImage:@"tabBar_essence_click_icon"];
     
-    UIViewController *vc2 = [[UIViewController alloc]init];
-    vc2.tabBarItem.title = @"最新";
-    vc2.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    vc2.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
-    vc2.view.backgroundColor = [UIColor blueColor];
-    [self addChildViewController:vc2];
     
-    UIViewController *vc3 = [[UIViewController alloc]init];
-    vc3.tabBarItem.title = @"关注";
-    vc3.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
-    vc3.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
-    vc3.view.backgroundColor = [UIColor brownColor];
-    [self addChildViewController:vc3];
+    [self setupChildVc:[[UITableViewController alloc]initWithStyle:UITableViewStyleGrouped]
+                 title:@"最新"
+                 image:@"tabBar_new_icon"
+         selectedImage:@"tabBar_new_click_icon"];
     
-    UIViewController *vc4 = [[UIViewController alloc]init];
-    vc4.tabBarItem.title = @"我";
-    vc4.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
-    vc4.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon"];
-    vc4.view.backgroundColor = [UIColor greenColor];
-    [self addChildViewController:vc4];
+    
+    [self setupChildVc:[[UITableViewController alloc]initWithStyle:UITableViewStylePlain]
+                 title:@"关注"
+                 image:@"tabBar_friendTrends_icon"
+         selectedImage:@"tabBar_friendTrends_click_icon"];
+    
+    
+    [self setupChildVc:[[UITableViewController alloc]init]
+                 title:@"我"
+                 image:@"tabBar_me_icon"
+         selectedImage:@"tabBar_me_icon"];
+}
+
+#pragma mark - 初始化子控制器
+-(void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage{
+    // 设置文字和图片
+    vc.tabBarItem.title = title;
+    vc.tabBarItem.image = [UIImage imageNamed:image];
+    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    
+    // 设置随机背景色
+    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0
+                                              green:arc4random_uniform(100)/100.0
+                                               blue:arc4random_uniform(100)/100.0
+                                              alpha:1.0];
+    // 添加为子控制器
+    [self addChildViewController:vc];
 }
 
 - (void)didReceiveMemoryWarning {
