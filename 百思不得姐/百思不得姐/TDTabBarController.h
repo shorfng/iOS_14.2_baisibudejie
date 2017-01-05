@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  TDTabBarController.h
 //  百思不得姐
 //
 //  Created by 蓝田 on 2017/1/5.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-@property (strong, nonatomic) UIWindow *window;
-@end
+@interface TDTabBarController : UITabBarController
 
+@end

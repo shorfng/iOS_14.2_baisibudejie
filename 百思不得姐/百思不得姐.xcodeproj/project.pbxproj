@@ -11,6 +11,7 @@
 		73110CFC1E1DF648009FC08F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73110CFB1E1DF648009FC08F /* AppDelegate.m */; };
 		73110CFF1E1DF648009FC08F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73110CFE1E1DF648009FC08F /* ViewController.m */; };
 		73110D041E1DF648009FC08F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73110D031E1DF648009FC08F /* Assets.xcassets */; };
+		7317D80C1E1E381900173F8C /* TDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D80B1E1E381900173F8C /* TDTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		73110CFE1E1DF648009FC08F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		73110D031E1DF648009FC08F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73110D081E1DF648009FC08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7317D80A1E1E381900173F8C /* TDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTabBarController.h; sourceTree = "<group>"; };
+		7317D80B1E1E381900173F8C /* TDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 				73110CFB1E1DF648009FC08F /* AppDelegate.m */,
 				73110CFD1E1DF648009FC08F /* ViewController.h */,
 				73110CFE1E1DF648009FC08F /* ViewController.m */,
+				7317D80A1E1E381900173F8C /* TDTabBarController.h */,
+				7317D80B1E1E381900173F8C /* TDTabBarController.m */,
 				73110CF71E1DF648009FC08F /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -99,6 +104,7 @@
 		73110CEC1E1DF648009FC08F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TD;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "蓝田";
 				TargetAttributes = {
@@ -146,6 +152,7 @@
 				73110CFF1E1DF648009FC08F /* ViewController.m in Sources */,
 				73110CFC1E1DF648009FC08F /* AppDelegate.m in Sources */,
 				73110CF91E1DF648009FC08F /* main.m in Sources */,
+				7317D80C1E1E381900173F8C /* TDTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +296,7 @@
 				73110D0D1E1DF648009FC08F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
