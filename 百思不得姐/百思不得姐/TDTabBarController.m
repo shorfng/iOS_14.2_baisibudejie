@@ -77,8 +77,12 @@
                                               green:arc4random_uniform(100)/100.0
                                                blue:arc4random_uniform(100)/100.0
                                               alpha:1.0];
-    // 添加为子控制器
-    [self addChildViewController:vc];
+    
+    // 将上面创建的 vc 传进来，包装为导航控制器
+    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:vc];
+    
+    // 将导航控制器添加为 tabbarController 的子控制器
+    [self addChildViewController:nav];
 }
 
 - (void)didReceiveMemoryWarning {

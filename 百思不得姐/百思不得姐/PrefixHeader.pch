@@ -16,4 +16,13 @@
 
 #import "UIView+TDFrameExtension.h"
 
+// 如果是开发阶段（debug），输出使用 NSLog 替换 Log 日志；否则使用 空 来替换 Log 日志
+#ifdef DEBUG
+#define TDLog(...) NSLog(__VA_ARGS__)
+#else
+#define TDLog(...)
+#endif
+
+#define TDLogFunc TDLog(@"%s", __func__)
+
 #endif /* PrefixHeader_pch */
