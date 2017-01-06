@@ -18,6 +18,8 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     
     if (self = [super initWithFrame:frame]) {
+        // 设置 tabbar 的背景图片
+        [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
         
         // 创建 button
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -47,7 +49,7 @@
     // 设置发布按钮的中心点
     self.publishButton.size = self.publishButton.currentBackgroundImage.size;
     self.publishButton.center = CGPointMake(width * 0.5, height * 0.5);
-
+    
     // 设置其他UITabBarButton的frame
     CGFloat buttonY = 0;
     CGFloat buttonW = width / 5;

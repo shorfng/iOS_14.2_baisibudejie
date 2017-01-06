@@ -24,6 +24,9 @@
                                                                  highImage:@"MainTagSubIconClick"
                                                                     target:self
                                                                     action:@selector(tagClick)];
+    
+    // 设置背景色
+    self.view.backgroundColor = TDGlobalBg;
 }
 
 - (void)tagClick{
@@ -36,13 +39,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

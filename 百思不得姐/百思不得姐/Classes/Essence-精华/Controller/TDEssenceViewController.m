@@ -24,6 +24,9 @@
                                                                  highImage:@"MainTagSubIconClick"
                                                                     target:self
                                                                     action:@selector(tagClick)];
+    
+    // 设置背景色
+    self.view.backgroundColor = TDGlobalBg;
 }
 
 - (void)tagClick{

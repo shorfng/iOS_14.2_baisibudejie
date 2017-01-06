@@ -18,6 +18,7 @@
 		7317D8DA1E1F771600173F8C /* TDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8CD1E1F771600173F8C /* TDTabBarController.m */; };
 		7317D8DB1E1F771600173F8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8CE1E1F771600173F8C /* main.m */; };
 		7317D8DC1E1F771600173F8C /* TDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8D21E1F771600173F8C /* TDTabBar.m */; };
+		7317D8E21E1F8EC100173F8C /* TDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8E11E1F8EC100173F8C /* TDNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		7317D8CF1E1F771600173F8C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7317D8D11E1F771600173F8C /* TDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTabBar.h; sourceTree = "<group>"; };
 		7317D8D21E1F771600173F8C /* TDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTabBar.m; sourceTree = "<group>"; };
+		7317D8E01E1F8EC100173F8C /* TDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNavigationController.h; sourceTree = "<group>"; };
+		7317D8E11E1F8EC100173F8C /* TDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +268,8 @@
 			children = (
 				7317D8CC1E1F771600173F8C /* TDTabBarController.h */,
 				7317D8CD1E1F771600173F8C /* TDTabBarController.m */,
+				7317D8E01E1F8EC100173F8C /* TDNavigationController.h */,
+				7317D8E11E1F8EC100173F8C /* TDNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 			files = (
 				7317D8D41E1F771600173F8C /* TDFriendTrendsViewController.m in Sources */,
 				7317D8D91E1F771600173F8C /* UIView+TDFrameExtension.m in Sources */,
+				7317D8E21E1F8EC100173F8C /* TDNavigationController.m in Sources */,
 				7317D8D61E1F771600173F8C /* TDNewViewController.m in Sources */,
 				7317D8D31E1F771600173F8C /* TDEssenceViewController.m in Sources */,
 				7317D8D51E1F771600173F8C /* TDMeViewController.m in Sources */,

@@ -12,6 +12,7 @@
 #import "TDFriendTrendsViewController.h"
 #import "TDMeViewController.h"
 #import "TDTabBar.h"
+#import "TDNavigationController.h"
 
 @interface TDTabBarController ()
 @end
@@ -43,7 +44,7 @@
                  title:@"精华"
                  image:@"tabBar_essence_icon"
          selectedImage:@"tabBar_essence_click_icon"];
- 
+    
     
     [self setupChildVc:[[TDNewViewController alloc]init]
                  title:@"最新"
@@ -56,7 +57,7 @@
                  image:@"tabBar_friendTrends_icon"
          selectedImage:@"tabBar_friendTrends_click_icon"];
     
- 
+    
     [self setupChildVc:[[TDMeViewController alloc]init]
                  title:@"我"
                  image:@"tabBar_me_icon"
@@ -74,33 +75,16 @@
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     
-    // 设置随机背景色
-    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0
-                                              green:arc4random_uniform(100)/100.0
-                                               blue:arc4random_uniform(100)/100.0
-                                              alpha:1.0];
-    
     // 将上面创建的 vc 传进来，包装为导航控制器
-    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:vc];
+    TDNavigationController *nav =[[TDNavigationController alloc]initWithRootViewController:vc];
     
     // 将导航控制器添加为 tabbarController 的子控制器
     [self addChildViewController:nav];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

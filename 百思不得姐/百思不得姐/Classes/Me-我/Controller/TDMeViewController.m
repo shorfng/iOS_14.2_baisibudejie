@@ -25,7 +25,7 @@
                                                            target:self
                                                            action:@selector(settingClick)];
     
-     // 设置导航栏右边的按钮:黑夜模式
+    // 设置导航栏右边的按钮:黑夜模式
     UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon"
                                                      highImage:@"mine-moon-icon-click"
                                                         target:self
@@ -33,6 +33,9 @@
     
     // 创建导航栏右边按钮（使用 Items）
     self.navigationItem.rightBarButtonItems = @[settingItem, moonItem];
+    
+    // 设置背景色
+    self.view.backgroundColor = TDGlobalBg;
 }
 
 - (void)settingClick{
@@ -49,13 +52,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

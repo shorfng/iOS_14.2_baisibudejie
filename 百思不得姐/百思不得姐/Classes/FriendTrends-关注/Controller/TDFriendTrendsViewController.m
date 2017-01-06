@@ -31,6 +31,9 @@
                                                                  highImage:@"friendsRecommentIcon-click"
                                                                     target:self
                                                                     action:@selector(friendsClick)];
+    
+    // 设置背景色
+    self.view.backgroundColor = TDGlobalBg;
 }
 
 - (void)friendsClick{
