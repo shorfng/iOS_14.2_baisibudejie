@@ -61,9 +61,8 @@
                  image:@"tabBar_me_icon"
          selectedImage:@"tabBar_me_click_icon"];
     
-    // 更换tabBar
+    // 更换tabBar （因为 tabBar 的属性是 readonly，则通过kvc访问其成员变量）
     [self setValue:[[TDTabBar alloc] init] forKeyPath:@"tabBar"];
-
 }
 
 #pragma mark - 初始化子控制器
