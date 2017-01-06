@@ -26,23 +26,11 @@
     // 设置导航栏标题（文字）
     self.navigationItem.title = @"我的关注";
     
-    // 设置导航栏左边的按钮类型
-    UIButton *friendsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    // 设置导航栏左边按钮的背景图片（Normal 和 Highlighted）
-    [friendsButton setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
-    [friendsButton setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] forState:UIControlStateHighlighted];
-    
-    // 设置导航栏左边按钮的尺寸（等于当前背景图片的尺寸）
-    friendsButton.size = friendsButton.currentBackgroundImage.size;
-    
-    // 导航栏左边按钮的点击事件
-    [friendsButton addTarget:self
-                      action:@selector(friendsClick)
-            forControlEvents:UIControlEventTouchUpInside];
-    
-    // 创建导航栏左边按钮（自定义 View，将上面的自定义的 View 传递进来）
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:friendsButton];
+    // 设置导航栏左边的按钮
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon"
+                                                                 highImage:@"friendsRecommentIcon-click"
+                                                                    target:self
+                                                                    action:@selector(friendsClick)];
 }
 
 - (void)friendsClick{

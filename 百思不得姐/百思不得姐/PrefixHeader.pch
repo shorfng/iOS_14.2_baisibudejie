@@ -15,6 +15,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "UIView+TDFrameExtension.h"
+#import "UIBarButtonItem+TDExtension.h"
 
 // 如果是开发阶段（debug），输出使用 NSLog 替换 Log 日志；否则使用 空 来替换 Log 日志
 #ifdef DEBUG

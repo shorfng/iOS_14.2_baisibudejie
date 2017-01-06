@@ -19,50 +19,27 @@
     // 设置导航栏标题（文字）
     self.navigationItem.title = @"我的";
     
-#pragma mark - 导航栏右边的按钮:设置
-    // 设置导航栏右边的按钮类型
-    UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    // 设置导航栏右边的按钮:设置
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon"
+                                                        highImage:@"mine-setting-icon-click"
+                                                           target:self
+                                                           action:@selector(settingClick)];
     
-    // 设置导航栏右边按钮的背景图片（Normal 和 Highlighted）
-    [settingButton setBackgroundImage:[UIImage imageNamed:@"mine-setting-icon"] forState:UIControlStateNormal];
-    [settingButton setBackgroundImage:[UIImage imageNamed:@"mine-setting-icon-click"] forState:UIControlStateHighlighted];
-    
-    // 设置导航栏右边按钮的尺寸（等于当前背景图片的尺寸）
-    settingButton.size = settingButton.currentBackgroundImage.size;
-    
-    // 导航栏右边按钮的点击事件
-    [settingButton addTarget:self
-                      action:@selector(settingClick)
-            forControlEvents:UIControlEventTouchUpInside];
-    
-#pragma mark - 导航栏右边的按钮:黑夜模式
-    // 设置导航栏右边的按钮类型
-    UIButton *nightModeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    // 设置导航栏右边按钮的背景图片（Normal 和 Highlighted）
-    [nightModeButton setBackgroundImage:[UIImage imageNamed:@"mine-moon-icon"] forState:UIControlStateNormal];
-    [nightModeButton setBackgroundImage:[UIImage imageNamed:@"mine-moon-icon-click"] forState:UIControlStateHighlighted];
-    
-    // 设置导航栏右边按钮的尺寸（等于当前背景图片的尺寸）
-    nightModeButton.size = nightModeButton.currentBackgroundImage.size;
-    
-    // 导航栏右边按钮的点击事件
-    [nightModeButton addTarget:self
-                        action:@selector(nightModeClick)
-              forControlEvents:UIControlEventTouchUpInside];
+    // 设置导航栏右边的按钮:黑夜模式
+    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon"
+                                                     highImage:@"mine-moon-icon-click"
+                                                        target:self
+                                                        action:@selector(moonClick)];
     
     // 创建导航栏右边按钮（使用 Items）
-    self.navigationItem.rightBarButtonItems = @[
-                                                [[UIBarButtonItem alloc] initWithCustomView:settingButton],
-                                                [[UIBarButtonItem alloc] initWithCustomView:nightModeButton]
-                                                ];
+    self.navigationItem.rightBarButtonItems = @[settingItem, moonItem];
 }
 
 - (void)settingClick{
     TDLogFunc;
 }
 
-- (void)nightModeClick{
+- (void)moonClick{
     TDLogFunc;
 }
 

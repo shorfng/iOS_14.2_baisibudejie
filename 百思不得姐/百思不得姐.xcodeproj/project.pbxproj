@@ -18,6 +18,7 @@
 		7317D82C1E1E96D500173F8C /* TDNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8261E1E96D500173F8C /* TDNewViewController.m */; };
 		7317D82D1E1E96D500173F8C /* TDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8281E1E96D500173F8C /* TDTabBar.m */; };
 		7317D8361E1F390100173F8C /* UIView+TDFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8351E1F390100173F8C /* UIView+TDFrameExtension.m */; };
+		7317D8421E1F70EF00173F8C /* UIBarButtonItem+TDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8411E1F70EF00173F8C /* UIBarButtonItem+TDExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		7317D8331E1F38EF00173F8C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7317D8341E1F390100173F8C /* UIView+TDFrameExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TDFrameExtension.h"; sourceTree = "<group>"; };
 		7317D8351E1F390100173F8C /* UIView+TDFrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TDFrameExtension.m"; sourceTree = "<group>"; };
+		7317D8401E1F70EF00173F8C /* UIBarButtonItem+TDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TDExtension.h"; sourceTree = "<group>"; };
+		7317D8411E1F70EF00173F8C /* UIBarButtonItem+TDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TDExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				7317D8221E1E96D500173F8C /* TDFriendTrendsViewController.m */,
 				7317D8231E1E96D500173F8C /* TDMeViewController.h */,
 				7317D8241E1E96D500173F8C /* TDMeViewController.m */,
+				7317D8401E1F70EF00173F8C /* UIBarButtonItem+TDExtension.h */,
+				7317D8411E1F70EF00173F8C /* UIBarButtonItem+TDExtension.m */,
 				73110CF71E1DF648009FC08F /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -190,6 +195,7 @@
 				7317D8361E1F390100173F8C /* UIView+TDFrameExtension.m in Sources */,
 				73110CF91E1DF648009FC08F /* main.m in Sources */,
 				7317D82B1E1E96D500173F8C /* TDMeViewController.m in Sources */,
+				7317D8421E1F70EF00173F8C /* UIBarButtonItem+TDExtension.m in Sources */,
 				7317D80C1E1E381900173F8C /* TDTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
