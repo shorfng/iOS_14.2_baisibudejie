@@ -10,7 +10,6 @@
 #import "TDTabBarController.h"
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -22,7 +21,7 @@
     // 创建窗口，初始化frame
     self.window = [[UIWindow alloc]init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    
+
     // 设置窗口的根控制器
     self.window.rootViewController =  [[TDTabBarController alloc]init];;
     
