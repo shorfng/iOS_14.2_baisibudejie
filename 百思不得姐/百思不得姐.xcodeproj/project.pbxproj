@@ -19,6 +19,11 @@
 		7317D8DB1E1F771600173F8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8CE1E1F771600173F8C /* main.m */; };
 		7317D8DC1E1F771600173F8C /* TDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8D21E1F771600173F8C /* TDTabBar.m */; };
 		7317D8E21E1F8EC100173F8C /* TDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7317D8E11E1F8EC100173F8C /* TDNavigationController.m */; };
+		737261B41E2761A600B2FA62 /* TDRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 737261B31E2761A600B2FA62 /* TDRecommendCategory.m */; };
+		737261B81E2761FB00B2FA62 /* TDRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 737261B61E2761FB00B2FA62 /* TDRecommendCategoryCell.m */; };
+		737261B91E2761FB00B2FA62 /* TDRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737261B71E2761FB00B2FA62 /* TDRecommendCategoryCell.xib */; };
+		737261BD1E27625300B2FA62 /* TDRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737261BB1E27625300B2FA62 /* TDRecommendViewController.m */; };
+		737261BE1E27625300B2FA62 /* TDRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737261BC1E27625300B2FA62 /* TDRecommendViewController.xib */; };
 		73E3674C1E2385540011F436 /* TDFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E3674B1E2385540011F436 /* TDFriendTrendsViewController.xib */; };
 		AE3C6E03C60B0D76877D97F6 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB1964F95FA313BE0760333 /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
@@ -51,6 +56,14 @@
 		7317D8D21E1F771600173F8C /* TDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTabBar.m; sourceTree = "<group>"; };
 		7317D8E01E1F8EC100173F8C /* TDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNavigationController.h; sourceTree = "<group>"; };
 		7317D8E11E1F8EC100173F8C /* TDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNavigationController.m; sourceTree = "<group>"; };
+		737261B21E2761A600B2FA62 /* TDRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRecommendCategory.h; sourceTree = "<group>"; };
+		737261B31E2761A600B2FA62 /* TDRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRecommendCategory.m; sourceTree = "<group>"; };
+		737261B51E2761FB00B2FA62 /* TDRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRecommendCategoryCell.h; sourceTree = "<group>"; };
+		737261B61E2761FB00B2FA62 /* TDRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRecommendCategoryCell.m; sourceTree = "<group>"; };
+		737261B71E2761FB00B2FA62 /* TDRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		737261BA1E27625300B2FA62 /* TDRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRecommendViewController.h; sourceTree = "<group>"; };
+		737261BB1E27625300B2FA62 /* TDRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRecommendViewController.m; sourceTree = "<group>"; };
+		737261BC1E27625300B2FA62 /* TDRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDRecommendViewController.xib; sourceTree = "<group>"; };
 		73E3674B1E2385540011F436 /* TDFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		B6920BD0456433B1D7EA2229 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +177,9 @@
 				7317D8B31E1F771600173F8C /* TDFriendTrendsViewController.h */,
 				7317D8B41E1F771600173F8C /* TDFriendTrendsViewController.m */,
 				73E3674B1E2385540011F436 /* TDFriendTrendsViewController.xib */,
+				737261BA1E27625300B2FA62 /* TDRecommendViewController.h */,
+				737261BB1E27625300B2FA62 /* TDRecommendViewController.m */,
+				737261BC1E27625300B2FA62 /* TDRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +187,8 @@
 		7317D8B51E1F771600173F8C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				737261B21E2761A600B2FA62 /* TDRecommendCategory.h */,
+				737261B31E2761A600B2FA62 /* TDRecommendCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +196,9 @@
 		7317D8B61E1F771600173F8C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				737261B51E2761FB00B2FA62 /* TDRecommendCategoryCell.h */,
+				737261B61E2761FB00B2FA62 /* TDRecommendCategoryCell.m */,
+				737261B71E2761FB00B2FA62 /* TDRecommendCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,7 +395,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E3674C1E2385540011F436 /* TDFriendTrendsViewController.xib in Resources */,
+				737261B91E2761FB00B2FA62 /* TDRecommendCategoryCell.xib in Resources */,
 				73110D041E1DF648009FC08F /* Assets.xcassets in Resources */,
+				737261BE1E27625300B2FA62 /* TDRecommendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,9 +457,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7317D8D41E1F771600173F8C /* TDFriendTrendsViewController.m in Sources */,
+				737261BD1E27625300B2FA62 /* TDRecommendViewController.m in Sources */,
 				7317D8D91E1F771600173F8C /* UIView+TDFrameExtension.m in Sources */,
 				7317D8E21E1F8EC100173F8C /* TDNavigationController.m in Sources */,
 				7317D8D61E1F771600173F8C /* TDNewViewController.m in Sources */,
+				737261B41E2761A600B2FA62 /* TDRecommendCategory.m in Sources */,
 				7317D8D31E1F771600173F8C /* TDEssenceViewController.m in Sources */,
 				7317D8D51E1F771600173F8C /* TDMeViewController.m in Sources */,
 				7317D8D81E1F771600173F8C /* UIBarButtonItem+TDExtension.m in Sources */,
@@ -444,6 +469,7 @@
 				7317D8DB1E1F771600173F8C /* main.m in Sources */,
 				7317D8DA1E1F771600173F8C /* TDTabBarController.m in Sources */,
 				7317D8DC1E1F771600173F8C /* TDTabBar.m in Sources */,
+				737261B81E2761FB00B2FA62 /* TDRecommendCategoryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,9 @@
 //
 
 #import "TDFriendTrendsViewController.h"
+#import "TDRecommendViewController.h"
 
 @interface TDFriendTrendsViewController ()
-
 @end
 
 @implementation TDFriendTrendsViewController
@@ -37,7 +37,9 @@
 }
 
 - (void)friendsClick{
-    TDLogFunc;
+    TDRecommendViewController *vc = [[TDRecommendViewController alloc]init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

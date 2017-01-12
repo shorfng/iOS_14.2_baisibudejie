@@ -3,4 +3,5 @@ target “百思不得姐” do
 pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
+pod 'MJExtension'
 end
