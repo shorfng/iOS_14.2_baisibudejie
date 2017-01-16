@@ -24,6 +24,9 @@
 		737261B91E2761FB00B2FA62 /* TDRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737261B71E2761FB00B2FA62 /* TDRecommendCategoryCell.xib */; };
 		737261BD1E27625300B2FA62 /* TDRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737261BB1E27625300B2FA62 /* TDRecommendViewController.m */; };
 		737261BE1E27625300B2FA62 /* TDRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737261BC1E27625300B2FA62 /* TDRecommendViewController.xib */; };
+		737261C91E2CBB7400B2FA62 /* TDRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 737261C81E2CBB7400B2FA62 /* TDRecommendUser.m */; };
+		737261CD1E2CBB9700B2FA62 /* TDRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 737261CB1E2CBB9700B2FA62 /* TDRecommendUserCell.m */; };
+		737261CE1E2CBB9700B2FA62 /* TDRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737261CC1E2CBB9700B2FA62 /* TDRecommendUserCell.xib */; };
 		73E3674C1E2385540011F436 /* TDFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E3674B1E2385540011F436 /* TDFriendTrendsViewController.xib */; };
 		AE3C6E03C60B0D76877D97F6 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB1964F95FA313BE0760333 /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
@@ -64,6 +67,11 @@
 		737261BA1E27625300B2FA62 /* TDRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRecommendViewController.h; sourceTree = "<group>"; };
 		737261BB1E27625300B2FA62 /* TDRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRecommendViewController.m; sourceTree = "<group>"; };
 		737261BC1E27625300B2FA62 /* TDRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDRecommendViewController.xib; sourceTree = "<group>"; };
+		737261C71E2CBB7400B2FA62 /* TDRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRecommendUser.h; sourceTree = "<group>"; };
+		737261C81E2CBB7400B2FA62 /* TDRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRecommendUser.m; sourceTree = "<group>"; };
+		737261CA1E2CBB9700B2FA62 /* TDRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRecommendUserCell.h; sourceTree = "<group>"; };
+		737261CB1E2CBB9700B2FA62 /* TDRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRecommendUserCell.m; sourceTree = "<group>"; };
+		737261CC1E2CBB9700B2FA62 /* TDRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDRecommendUserCell.xib; sourceTree = "<group>"; };
 		73E3674B1E2385540011F436 /* TDFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		B6920BD0456433B1D7EA2229 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +197,8 @@
 			children = (
 				737261B21E2761A600B2FA62 /* TDRecommendCategory.h */,
 				737261B31E2761A600B2FA62 /* TDRecommendCategory.m */,
+				737261C71E2CBB7400B2FA62 /* TDRecommendUser.h */,
+				737261C81E2CBB7400B2FA62 /* TDRecommendUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +209,9 @@
 				737261B51E2761FB00B2FA62 /* TDRecommendCategoryCell.h */,
 				737261B61E2761FB00B2FA62 /* TDRecommendCategoryCell.m */,
 				737261B71E2761FB00B2FA62 /* TDRecommendCategoryCell.xib */,
+				737261CA1E2CBB9700B2FA62 /* TDRecommendUserCell.h */,
+				737261CB1E2CBB9700B2FA62 /* TDRecommendUserCell.m */,
+				737261CC1E2CBB9700B2FA62 /* TDRecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,6 +411,7 @@
 				737261B91E2761FB00B2FA62 /* TDRecommendCategoryCell.xib in Resources */,
 				73110D041E1DF648009FC08F /* Assets.xcassets in Resources */,
 				737261BE1E27625300B2FA62 /* TDRecommendViewController.xib in Resources */,
+				737261CE1E2CBB9700B2FA62 /* TDRecommendUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,12 +471,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7317D8D41E1F771600173F8C /* TDFriendTrendsViewController.m in Sources */,
+				737261CD1E2CBB9700B2FA62 /* TDRecommendUserCell.m in Sources */,
 				737261BD1E27625300B2FA62 /* TDRecommendViewController.m in Sources */,
 				7317D8D91E1F771600173F8C /* UIView+TDFrameExtension.m in Sources */,
 				7317D8E21E1F8EC100173F8C /* TDNavigationController.m in Sources */,
 				7317D8D61E1F771600173F8C /* TDNewViewController.m in Sources */,
 				737261B41E2761A600B2FA62 /* TDRecommendCategory.m in Sources */,
 				7317D8D31E1F771600173F8C /* TDEssenceViewController.m in Sources */,
+				737261C91E2CBB7400B2FA62 /* TDRecommendUser.m in Sources */,
 				7317D8D51E1F771600173F8C /* TDMeViewController.m in Sources */,
 				7317D8D81E1F771600173F8C /* UIBarButtonItem+TDExtension.m in Sources */,
 				7317D8D71E1F771600173F8C /* AppDelegate.m in Sources */,
