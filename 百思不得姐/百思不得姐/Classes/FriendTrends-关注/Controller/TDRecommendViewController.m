@@ -54,10 +54,11 @@ static NSString * const TDUserId = @"user";
                                    // 隐藏指示器
                                    [SVProgressHUD dismiss];
                                    
+                                   // 字典数组 -> 模型数组
                                    // 将服务器返回的字典list（Json数据）转换成模型数组TDRecommendCategory
                                    self.categories = [TDRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
                                    
-                                   NSLog(@"%@",responseObject);
+                                   // NSLog(@"%@",responseObject);
                                    
                                    // 刷新表格
                                    [self.categoryTableView reloadData];
@@ -74,7 +75,6 @@ static NSString * const TDUserId = @"user";
 
 #pragma mark - 控件的初始化
 - (void)setupTableView{
-    
     // 设置代理和数据源 （左侧的表格视图使用的是代码设置，右侧的表格视图使用的是连线方式）
     _categoryTableView.delegate = self;
     _categoryTableView.dataSource = self;
@@ -100,10 +100,12 @@ static NSString * const TDUserId = @"user";
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     // 判断是左侧表格还是右侧表格
-    if (tableView == self.categoryTableView) {
+    if (tableView == self.categoryTableView) {  // 左侧表格
         return self.categories.count;
-    }else{
-        return self.users.count;
+    }else{  // 右侧表格
+        // 左边被选中的类别模型（获取左侧的行号）
+        TDRecommendCategory *category = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        return category.users.count;
     }
 }
 
@@ -123,7 +125,8 @@ static NSString * const TDUserId = @"user";
         return cell;
     }else{
         TDRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:TDUserId];
-        cell.user = self.users[indexPath.row];
+        TDRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        cell.user = c.users[indexPath.row];
         return cell;
     }
 }
@@ -133,33 +136,42 @@ static NSString * const TDUserId = @"user";
     
     TDRecommendCategory *category = self.categories[indexPath.row];
     
-    // 设置请求参数
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(category.id);
-    
-    // 开始发送请求
-    [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php"
-                            parameters:params
-                              progress:nil
-                               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                   
-                                   self.users = [ TDRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-                                   
-                                   // 刷新右边的表格
-                                   [self.userTableView reloadData];
-                                   
-                                   TDLog(@"%@",responseObject);
-                               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                   
-                                   TDLog(@"%@",error);
-                               }];
+    // 判断右侧的表格中是否有数据，如果有就只刷新，如果没有就从服务器获取
+    if (category.users.count) {
+        [self.userTableView reloadData];
+    }else{
+        // 设置请求参数
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        params[@"a"] = @"list";
+        params[@"c"] = @"subscribe";
+        params[@"category_id"] = @(category.id);
+        
+        // 开始发送请求给服务器, 加载右侧的数据
+        [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php"
+                                parameters:params
+                                  progress:nil
+                                   success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                       
+                                       // 字典数组 -> 模型数组
+                                       // 将服务器返回的字典list（Json数据）转换成模型数组TDRecommendCategory
+                                       NSArray *users = [ TDRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+                                       
+                                       // 添加到当前类别对应的用户数组中
+                                       [category.users addObjectsFromArray:users];
+                                       
+                                       // 刷新右边的表格
+                                       [self.userTableView reloadData];
+                                       
+                                       // TDLog(@"%@",responseObject);
+                                   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                       
+                                       TDLog(@"%@",error);
+                                   }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end
