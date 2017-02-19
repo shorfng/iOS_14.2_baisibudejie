@@ -20,16 +20,29 @@
     
     // 方法1:当导航栏用在 TDNavigationController 中, appearance设置才会生效
     UINavigationBar *bar = [UINavigationBar appearance];
-    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]
-              forBarMetrics:UIBarMetricsDefault];
+    
+    //方法1 ：设置导航栏背景图片
+    //    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]
+    //              forBarMetrics:UIBarMetricsDefault];
+    
+    // 方法2：设置导航栏背景色RGB值
+    bar.barTintColor =[UIColor colorWithRed:252/255.0 green:13/255.0 blue:68/255.0 alpha:1.0];
+    
+    // 设置导航栏标题颜色为白色
+    [bar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 方法2：拿到当前的navigationBar进行设置
+    // 方法3：拿到当前的navigationBar进行设置图片
     //    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]
     //                             forBarMetrics:UIBarMetricsDefault];
+}
+
+#pragma mark - 状态栏颜色设置为白色
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - 拦截所有push进来的控制器，进行自定义返回按钮

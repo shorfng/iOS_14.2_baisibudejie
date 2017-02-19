@@ -19,17 +19,26 @@
     // 设置导航栏的标题 View（是一个图片）
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
     
-    // 设置导航栏左边的按钮
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon"
-                                                                 highImage:@"MainTagSubIconClick"
+    // 设置导航栏左边的按钮 - 排行榜
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_item_game_icon"
+                                                                 highImage:@"nav_item_game_click_icon"
                                                                     target:self
-                                                                    action:@selector(tagClick)];
+                                                                    action:@selector(rankClick)];
+    // 设置导航栏右边的按钮 - 随机穿越
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"RandomAcross"
+                                                                  highImage:@"RandomAcrossClick"
+                                                                     target:self
+                                                                     action:@selector(crossClick)];
     
     // 设置背景色
     self.view.backgroundColor = TDGlobalBg;
 }
 
-- (void)tagClick{
+- (void)rankClick{
+    TDLogFunc;
+}
+
+-(void)crossClick{
     TDLogFunc;
 }
 
@@ -37,15 +46,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

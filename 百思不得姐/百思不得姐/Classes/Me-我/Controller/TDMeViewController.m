@@ -19,6 +19,14 @@
     // 设置导航栏标题（文字）
     self.navigationItem.title = @"我的";
     
+    // 设置导航栏左边的按钮:积分
+    UIBarButtonItem *integral = [UIBarButtonItem itemWithImage:@"nav_coin_icon"
+                                                     highImage:@"nav_coin_icon_click"
+                                                        target:self
+                                                        action:@selector(integralClick)];
+    
+    self.navigationItem.leftBarButtonItem = integral;
+    
     // 设置导航栏右边的按钮:设置
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon"
                                                         highImage:@"mine-setting-icon-click"
@@ -31,11 +39,15 @@
                                                         target:self
                                                         action:@selector(moonClick)];
     
-    // 创建导航栏右边按钮（使用 Items）
+    // 创建导航栏右边按钮（使用 Items,按顺序，从右往左放）
     self.navigationItem.rightBarButtonItems = @[settingItem, moonItem];
     
     // 设置背景色
     self.view.backgroundColor = TDGlobalBg;
+}
+
+-(void)integralClick{
+    TDLogFunc;
 }
 
 - (void)settingClick{
@@ -50,15 +62,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

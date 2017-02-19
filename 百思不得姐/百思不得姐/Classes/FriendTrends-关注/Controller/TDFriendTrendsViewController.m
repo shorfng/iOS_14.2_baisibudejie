@@ -24,13 +24,18 @@
     //    self.tabBarItem.title = @"我的关注";
     
     // 设置导航栏标题（文字）
-    self.navigationItem.title = @"我的关注";
+    self.navigationItem.title = @"关注";
     
     // 设置导航栏左边的按钮
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon"
-                                                                 highImage:@"friendsRecommentIcon-click"
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"cellFollowIcon"
+                                                                 highImage:@"cellFollowDisableIcon"
                                                                     target:self
                                                                     action:@selector(friendsClick)];
+    // 设置导航栏右边的按钮 - 搜索
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_search_icon"
+                                                                  highImage:@"nav_search_icon_click"
+                                                                     target:self
+                                                                     action:@selector(searchClick)];
     
     // 设置背景色
     self.view.backgroundColor = TDGlobalBg;
@@ -42,19 +47,13 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+-(void)searchClick{
+    TDLogFunc;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
