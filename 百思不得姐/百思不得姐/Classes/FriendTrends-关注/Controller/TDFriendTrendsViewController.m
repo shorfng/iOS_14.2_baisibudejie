@@ -8,6 +8,7 @@
 
 #import "TDFriendTrendsViewController.h"
 #import "TDRecommendViewController.h"
+#import "TDLoginRegisterViewController.h"
 
 @interface TDFriendTrendsViewController ()
 @end
@@ -30,7 +31,7 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"cellFollowIcon"
                                                                  highImage:@"cellFollowDisableIcon"
                                                                     target:self
-                                                                    action:@selector(friendsClick)];
+                                                                    action:@selector(recommendClick)];
     // 设置导航栏右边的按钮 - 搜索
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_search_icon"
                                                                   highImage:@"nav_search_icon_click"
@@ -41,14 +42,21 @@
     self.view.backgroundColor = TDGlobalBg;
 }
 
-- (void)friendsClick{
+#pragma mark - 推荐关注按钮
+- (void)recommendClick{
     TDRecommendViewController *vc = [[TDRecommendViewController alloc]init];
-    
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark - 搜索按钮
 -(void)searchClick{
     TDLogFunc;
+}
+
+#pragma mark - 登录注册按钮
+- (IBAction)loginRegisterButton:(UIButton *)sender {
+    TDLoginRegisterViewController *vc =[[TDLoginRegisterViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
