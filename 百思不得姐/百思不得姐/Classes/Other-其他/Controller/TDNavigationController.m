@@ -16,28 +16,23 @@
 #pragma mark - 当第一次使用这个类的时候会调用一次
 + (void)initialize{
     
-    // 设置 navigationBar 的背景图片
-    
-    // 方法1:当导航栏用在 TDNavigationController 中, appearance设置才会生效
+    // 当导航栏用在 TDNavigationController 中, appearance设置才会生效
     UINavigationBar *bar = [UINavigationBar appearance];
     
-    //方法1 ：设置导航栏背景图片
-    //    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]
-    //              forBarMetrics:UIBarMetricsDefault];
+    // 关闭半透明特效（导航栏下方的 view 会自动跟进，因此 view 的y设置时应为0 ）
+//    bar.translucent = NO;
     
-    // 方法2：设置导航栏背景色RGB值
-    bar.barTintColor =[UIColor colorWithRed:252/255.0 green:13/255.0 blue:68/255.0 alpha:1.0];
-    
+    // 设置导航栏背景色RGB值
+    bar.barTintColor = [UIColor colorWithRed:252/255.0 green:13/255.0 blue:68/255.0 alpha:1.0];
+ 
     // 设置导航栏标题颜色为白色
     [bar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 方法3：拿到当前的navigationBar进行设置图片
-    //    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]
-    //                             forBarMetrics:UIBarMetricsDefault];
 }
 
 #pragma mark - 状态栏颜色设置为白色
