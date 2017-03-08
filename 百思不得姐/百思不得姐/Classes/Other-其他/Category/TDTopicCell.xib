@@ -27,13 +27,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5d-fm-9zO" userLabel="用户昵称">
-                        <rect key="frame" x="63" y="18" width="37.5" height="18"/>
+                        <rect key="frame" x="63" y="18" width="38" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R30-3v-Xau" userLabel="发帖时间">
-                        <rect key="frame" x="63" y="38.5" width="31" height="14.5"/>
+                        <rect key="frame" x="63" y="38" width="31" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -140,6 +140,13 @@
                             <constraint firstItem="FZj-m4-vXf" firstAttribute="leading" secondItem="ie8-xz-qa7" secondAttribute="trailing" id="zaG-2z-Jr4"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-ds-iE4" userLabel="是否加V">
+                        <rect key="frame" x="44" y="44" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="Zhi-Ko-RCw"/>
+                            <constraint firstAttribute="height" constant="14" id="wLG-nk-s4d"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="2EO-97-LTw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="12i-ub-kMc"/>
@@ -150,7 +157,9 @@
                     <constraint firstAttribute="trailing" secondItem="8m8-Ld-onL" secondAttribute="trailing" id="PBd-Vl-pCt"/>
                     <constraint firstItem="8m8-Ld-onL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Pd3-3h-lNh"/>
                     <constraint firstAttribute="bottom" secondItem="8m8-Ld-onL" secondAttribute="bottom" id="QBX-tV-YFw"/>
+                    <constraint firstItem="aoA-ds-iE4" firstAttribute="trailing" secondItem="2EO-97-LTw" secondAttribute="trailing" constant="5" id="aOd-R1-8L7"/>
                     <constraint firstItem="8m8-Ld-onL" firstAttribute="top" secondItem="BH0-Rp-vHG" secondAttribute="bottom" id="f3y-db-5mb"/>
+                    <constraint firstItem="aoA-ds-iE4" firstAttribute="bottom" secondItem="2EO-97-LTw" secondAttribute="bottom" constant="5" id="hCR-76-plu"/>
                     <constraint firstItem="s5d-fm-9zO" firstAttribute="top" secondItem="2EO-97-LTw" secondAttribute="top" id="htV-53-r4X"/>
                     <constraint firstItem="BH0-Rp-vHG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="k0V-fP-n6Z"/>
                     <constraint firstItem="R30-3v-Xau" firstAttribute="bottom" secondItem="2EO-97-LTw" secondAttribute="bottom" id="kr5-CK-u1Y"/>
@@ -166,11 +175,13 @@
                 <outlet property="nameLabel" destination="s5d-fm-9zO" id="3S4-5N-BGt"/>
                 <outlet property="profileImageView" destination="2EO-97-LTw" id="DjD-ka-PkP"/>
                 <outlet property="shareButton" destination="mXu-Hz-cIr" id="I1c-zb-AAq"/>
+                <outlet property="sinaVView" destination="aoA-ds-iE4" id="S4N-uT-k6Y"/>
             </connections>
             <point key="canvasLocation" x="38" y="114.5"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
         <image name="cellFollowIcon" width="19" height="20"/>

@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;             // 被踩数
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;           // 分享数
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;         // 评论数
+@property (weak, nonatomic) IBOutlet UIImageView *sinaVView;          // 新浪加V  
 @end
 
 @implementation TDTopicCell
@@ -34,6 +35,9 @@
 
 - (void)setTopic:(TDTopic *)topic{
     _topic = topic;
+    
+    // 不是新浪加V，就隐藏
+    self.sinaVView.hidden = !topic.isSina_v;
     
     // 设置头像
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image]

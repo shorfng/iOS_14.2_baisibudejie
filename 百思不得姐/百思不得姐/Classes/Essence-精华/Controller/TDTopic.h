@@ -17,4 +17,5 @@
 @property (nonatomic, assign) NSInteger cai;          // 踩的数量
 @property (nonatomic, assign) NSInteger repost;       // 转发数
 @property (nonatomic, assign) NSInteger comment;      // 评论数
+@property (nonatomic, assign, getter=isSina_v) BOOL sina_v;  // 是否为新浪加V用户
 @end
