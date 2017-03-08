@@ -128,7 +128,6 @@ static NSString * const TDUserId = @"user";
     // 进上拉刷新状态
     self.userTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
                                                                         refreshingAction:@selector(loadMoreUsers)];
-    self.userTableView.mj_footer.hidden = YES;
 }
 
 #pragma mark - 下拉刷新加载用户数据（右侧表格）

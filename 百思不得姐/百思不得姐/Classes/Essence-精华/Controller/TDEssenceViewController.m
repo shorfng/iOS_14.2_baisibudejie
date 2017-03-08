@@ -63,22 +63,27 @@
     
     // 推荐
     TDRecViewController *recom = [[TDRecViewController alloc] init];
+    recom.title = @"推荐";
     [self addChildViewController:recom];
     
     // 视频
     TDVideoViewController *video = [[TDVideoViewController alloc] init];
+    video.title = @"视频";
     [self addChildViewController:video];
     
     // 图片
     TDPictureViewController *picture = [[TDPictureViewController alloc] init];
+    picture.title = @"图片";
     [self addChildViewController:picture];
     
     // 段子
     TDWordViewController *word = [[TDWordViewController alloc] init];
+    word.title = @"段子";
     [self addChildViewController:word];
     
     // 声音
     TDVoiceViewController *voice = [[TDVoiceViewController alloc] init];
+    voice.title = @"声音";
     [self addChildViewController:voice];
     
 }
@@ -90,8 +95,8 @@
     UIView *titlesView = [[UIView alloc] init];
     titlesView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     titlesView.width = self.view.width;
-    titlesView.height = 35;
-    titlesView.y = 64;
+    titlesView.height = TDTitilesViewH;
+    titlesView.y = TDTitilesViewY;
     [self.view addSubview:titlesView];
     self.titlesView = titlesView;
     
@@ -104,12 +109,11 @@
     self.indicatorView = indicatorView;
     
     // 内部的子标签
-    NSArray *titles = @[@"推荐", @"视频", @"图片", @"段子",@"声音"];
     
-    CGFloat width = titlesView.width / titles.count;
+    CGFloat width = titlesView.width / self.childViewControllers.count;
     CGFloat height = titlesView.height;
     
-    for (NSInteger i = 0; i<titles.count; i++) {
+    for (NSInteger i = 0; i<self.childViewControllers.count; i++) {
         UIButton *button = [[UIButton alloc] init];
         
         // 子标签大小
@@ -119,7 +123,8 @@
         button.x = i * width;
         
         // 子标签属性
-        [button setTitle:titles[i] forState:UIControlStateNormal];
+        UIViewController *vc = self.childViewControllers[i];
+        [button setTitle:vc.title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
         button.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -156,9 +161,10 @@
         self.indicatorView.centerX = button.centerX;
     }];
     
-    // 滚动
+    // 让 contentView 沿着x轴滚动
     CGPoint offset = self.contentView.contentOffset;
-    offset.x = button.tag * self.contentView.width;
+    offset.x = button.tag * self.contentView.width; // 只改变x值，即横向移动
+    
     [self.contentView setContentOffset:offset animated:YES];
 }
 
@@ -172,6 +178,8 @@
     contentView.delegate = self;
     contentView.pagingEnabled = YES;
     [self.view insertSubview:contentView atIndex:0];
+    
+    // 宽度 = 一个contentView的宽 x 子控制器的个数
     contentView.contentSize = CGSizeMake(contentView.width * self.childViewControllers.count, 0);
     self.contentView = contentView;
     
@@ -187,7 +195,7 @@
     TDLogFunc;
 }
 
-#pragma mark - UIScrollViewDelegate（代理方法）
+#pragma mark - UIScrollViewDelegate（代理方法） - 滚动的动画完成时调用
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
     // 当前的索引
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
@@ -195,17 +203,13 @@
     // 取出子控制器
     UITableViewController *vc = self.childViewControllers[index];
     vc.view.x = scrollView.contentOffset.x;
-    vc.view.y = 0; // 设置控制器view的y值为0(默认是20)
+    vc.view.y = 0; // 设置控制器view的y值为0(默认是20，在状态栏下方)
     vc.view.height = scrollView.height; // 设置控制器view的height值为整个屏幕的高度(默认是比屏幕高度少个20)
-    // 设置内边距
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-    // 设置滚动条的内边距
-    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+    
     [scrollView addSubview:vc.view];
 }
 
+#pragma mark - 停止拖拽后，滚动到子控制器，点击相应的标签按钮
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     
     [self scrollViewDidEndScrollingAnimation:scrollView];
