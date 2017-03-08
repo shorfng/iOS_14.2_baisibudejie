@@ -35,6 +35,7 @@
 		73751B371E6E8B4800FBB320 /* TDConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 73751B361E6E8B4800FBB320 /* TDConst.m */; };
 		73751B3B1E6EAB0B00FBB320 /* TDTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73751B391E6EAB0B00FBB320 /* TDTopicCell.m */; };
 		73751B3C1E6EAB0B00FBB320 /* TDTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73751B3A1E6EAB0B00FBB320 /* TDTopicCell.xib */; };
+		73751B421E6FF8BB00FBB320 /* NSDate+TDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73751B411E6FF8BB00FBB320 /* NSDate+TDExtension.m */; };
 		73A3AE801E6801A10041A3DD /* TDVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3AE7F1E6801A10041A3DD /* TDVideoViewController.m */; };
 		73A3AE831E6801D00041A3DD /* TDPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3AE821E6801D00041A3DD /* TDPictureViewController.m */; };
 		73A3AE861E6801DE0041A3DD /* TDWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3AE851E6801DE0041A3DD /* TDWordViewController.m */; };
@@ -99,6 +100,8 @@
 		73751B381E6EAB0B00FBB320 /* TDTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDTopicCell.h; path = "百思不得姐/Classes/Other-其他/Category/TDTopicCell.h"; sourceTree = SOURCE_ROOT; };
 		73751B391E6EAB0B00FBB320 /* TDTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDTopicCell.m; path = "百思不得姐/Classes/Other-其他/Category/TDTopicCell.m"; sourceTree = SOURCE_ROOT; };
 		73751B3A1E6EAB0B00FBB320 /* TDTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TDTopicCell.xib; path = "百思不得姐/Classes/Other-其他/Category/TDTopicCell.xib"; sourceTree = SOURCE_ROOT; };
+		73751B401E6FF8BB00FBB320 /* NSDate+TDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TDExtension.h"; sourceTree = "<group>"; };
+		73751B411E6FF8BB00FBB320 /* NSDate+TDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TDExtension.m"; sourceTree = "<group>"; };
 		73A3AE7E1E6801A10041A3DD /* TDVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDVideoViewController.h; sourceTree = "<group>"; };
 		73A3AE7F1E6801A10041A3DD /* TDVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDVideoViewController.m; sourceTree = "<group>"; };
 		73A3AE811E6801D00041A3DD /* TDPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDPictureViewController.h; sourceTree = "<group>"; };
@@ -180,7 +183,6 @@
 				7317D8B11E1F771600173F8C /* FriendTrends-关注 */,
 				7317D8B71E1F771600173F8C /* Me-我 */,
 				7317D8C31E1F771600173F8C /* Other-其他 */,
-				73AE961B1E66DED60094854F /* Category-工具类 */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -358,6 +360,8 @@
 				7317D8CA1E1F771600173F8C /* UIView+TDFrameExtension.m */,
 				73751B351E6E8B4800FBB320 /* TDConst.h */,
 				73751B361E6E8B4800FBB320 /* TDConst.m */,
+				73751B401E6FF8BB00FBB320 /* NSDate+TDExtension.h */,
+				73751B411E6FF8BB00FBB320 /* NSDate+TDExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -478,13 +482,6 @@
 				7344CF4B1E59E3CD0018E9A2 /* TDPhoneLoginRegisterController.xib */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		73AE961B1E66DED60094854F /* Category-工具类 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Category-工具类";
 			sourceTree = "<group>";
 		};
 		DD29C87C11A0EBC01640D59E /* Pods */ = {
@@ -639,6 +636,7 @@
 				737261CD1E2CBB9700B2FA62 /* TDRecommendUserCell.m in Sources */,
 				73E4464C1E6853D700DBE46A /* TDTopic.m in Sources */,
 				737261BD1E27625300B2FA62 /* TDRecommendViewController.m in Sources */,
+				73751B421E6FF8BB00FBB320 /* NSDate+TDExtension.m in Sources */,
 				73A3AE861E6801DE0041A3DD /* TDWordViewController.m in Sources */,
 				7344CF4C1E59E3CD0018E9A2 /* TDPhoneLoginRegisterController.m in Sources */,
 				7317D8D91E1F771600173F8C /* UIView+TDFrameExtension.m in Sources */,

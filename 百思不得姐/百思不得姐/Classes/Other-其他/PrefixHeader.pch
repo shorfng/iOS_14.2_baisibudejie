@@ -17,6 +17,7 @@
 #import "UIView+TDFrameExtension.h"
 #import "UIBarButtonItem+TDExtension.h"
 #import "TDConst.h"
+#import "NSDate+TDExtension.h"     // 比较时间差的分类
 
 // 如果是开发阶段（debug），输出使用 NSLog 替换 Log 日志；否则使用 空 来替换 Log 日志
 #ifdef DEBUG
