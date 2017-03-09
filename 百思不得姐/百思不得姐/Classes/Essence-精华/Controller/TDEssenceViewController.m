@@ -7,11 +7,7 @@
 //
 
 #import "TDEssenceViewController.h"
-#import "TDRecViewController.h"
-#import "TDVideoViewController.h"
-#import "TDPictureViewController.h"
-#import "TDWordViewController.h"
-#import "TDVoiceViewController.h"
+#import "TDTopicViewController.h"
 
 @interface TDEssenceViewController ()<UIScrollViewDelegate>
 @property (nonatomic, weak) UIView *indicatorView;     // 标签栏底部的指示器
@@ -62,30 +58,34 @@
 - (void)setupChildVces{
     
     // 推荐
-    TDRecViewController *recom = [[TDRecViewController alloc] init];
+    TDTopicViewController *recom = [[TDTopicViewController alloc] init];
     recom.title = @"推荐";
+    recom.type = TDTopicTypeRecom;
     [self addChildViewController:recom];
     
     // 视频
-    TDVideoViewController *video = [[TDVideoViewController alloc] init];
+    TDTopicViewController *video = [[TDTopicViewController alloc] init];
     video.title = @"视频";
+    video.type  = TDTopicTypeVideo;
     [self addChildViewController:video];
     
     // 图片
-    TDPictureViewController *picture = [[TDPictureViewController alloc] init];
+    TDTopicViewController *picture = [[TDTopicViewController alloc] init];
     picture.title = @"图片";
+    picture.type = TDTopicTypePicture;
     [self addChildViewController:picture];
     
     // 段子
-    TDWordViewController *word = [[TDWordViewController alloc] init];
+    TDTopicViewController *word = [[TDTopicViewController alloc] init];
     word.title = @"段子";
+    word.type = TDTopicTypeWord;
     [self addChildViewController:word];
     
     // 声音
-    TDVoiceViewController *voice = [[TDVoiceViewController alloc] init];
+    TDTopicViewController *voice = [[TDTopicViewController alloc] init];
     voice.title = @"声音";
+    video.type = TDTopicTypeVoice;
     [self addChildViewController:voice];
-    
 }
 
 #pragma mark - 设置顶部的标签栏

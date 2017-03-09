@@ -36,12 +36,8 @@
 		73751B3B1E6EAB0B00FBB320 /* TDTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73751B391E6EAB0B00FBB320 /* TDTopicCell.m */; };
 		73751B3C1E6EAB0B00FBB320 /* TDTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73751B3A1E6EAB0B00FBB320 /* TDTopicCell.xib */; };
 		73751B421E6FF8BB00FBB320 /* NSDate+TDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73751B411E6FF8BB00FBB320 /* NSDate+TDExtension.m */; };
-		73A3AE801E6801A10041A3DD /* TDVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3AE7F1E6801A10041A3DD /* TDVideoViewController.m */; };
-		73A3AE831E6801D00041A3DD /* TDPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3AE821E6801D00041A3DD /* TDPictureViewController.m */; };
-		73A3AE861E6801DE0041A3DD /* TDWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3AE851E6801DE0041A3DD /* TDWordViewController.m */; };
-		73A3AE8C1E68088B0041A3DD /* TDVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3AE8B1E68088B0041A3DD /* TDVoiceViewController.m */; };
+		73D70C661E70309400399895 /* TDTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D70C651E70309400399895 /* TDTopicViewController.m */; };
 		73E3674C1E2385540011F436 /* TDFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E3674B1E2385540011F436 /* TDFriendTrendsViewController.xib */; };
-		73E446491E680C4B00DBE46A /* TDRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E446481E680C4B00DBE46A /* TDRecViewController.m */; };
 		73E4464C1E6853D700DBE46A /* TDTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4464B1E6853D700DBE46A /* TDTopic.m */; };
 		AE3C6E03C60B0D76877D97F6 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB1964F95FA313BE0760333 /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
@@ -102,17 +98,9 @@
 		73751B3A1E6EAB0B00FBB320 /* TDTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TDTopicCell.xib; path = "百思不得姐/Classes/Other-其他/Category/TDTopicCell.xib"; sourceTree = SOURCE_ROOT; };
 		73751B401E6FF8BB00FBB320 /* NSDate+TDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TDExtension.h"; sourceTree = "<group>"; };
 		73751B411E6FF8BB00FBB320 /* NSDate+TDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TDExtension.m"; sourceTree = "<group>"; };
-		73A3AE7E1E6801A10041A3DD /* TDVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDVideoViewController.h; sourceTree = "<group>"; };
-		73A3AE7F1E6801A10041A3DD /* TDVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDVideoViewController.m; sourceTree = "<group>"; };
-		73A3AE811E6801D00041A3DD /* TDPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDPictureViewController.h; sourceTree = "<group>"; };
-		73A3AE821E6801D00041A3DD /* TDPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDPictureViewController.m; sourceTree = "<group>"; };
-		73A3AE841E6801DE0041A3DD /* TDWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDWordViewController.h; sourceTree = "<group>"; };
-		73A3AE851E6801DE0041A3DD /* TDWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDWordViewController.m; sourceTree = "<group>"; };
-		73A3AE8A1E68088B0041A3DD /* TDVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDVoiceViewController.h; sourceTree = "<group>"; };
-		73A3AE8B1E68088B0041A3DD /* TDVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDVoiceViewController.m; sourceTree = "<group>"; };
+		73D70C641E70309400399895 /* TDTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTopicViewController.h; sourceTree = "<group>"; };
+		73D70C651E70309400399895 /* TDTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTopicViewController.m; sourceTree = "<group>"; };
 		73E3674B1E2385540011F436 /* TDFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDFriendTrendsViewController.xib; sourceTree = "<group>"; };
-		73E446471E680C4B00DBE46A /* TDRecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRecViewController.h; sourceTree = "<group>"; };
-		73E446481E680C4B00DBE46A /* TDRecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRecViewController.m; sourceTree = "<group>"; };
 		73E4464A1E6853D700DBE46A /* TDTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDTopic.h; path = "百思不得姐/Classes/Essence-精华/Controller/TDTopic.h"; sourceTree = SOURCE_ROOT; };
 		73E4464B1E6853D700DBE46A /* TDTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDTopic.m; path = "百思不得姐/Classes/Essence-精华/Controller/TDTopic.m"; sourceTree = SOURCE_ROOT; };
 		B6920BD0456433B1D7EA2229 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,16 +190,8 @@
 			children = (
 				7317D8AD1E1F771600173F8C /* TDEssenceViewController.h */,
 				7317D8AE1E1F771600173F8C /* TDEssenceViewController.m */,
-				73E446471E680C4B00DBE46A /* TDRecViewController.h */,
-				73E446481E680C4B00DBE46A /* TDRecViewController.m */,
-				73A3AE7E1E6801A10041A3DD /* TDVideoViewController.h */,
-				73A3AE7F1E6801A10041A3DD /* TDVideoViewController.m */,
-				73A3AE811E6801D00041A3DD /* TDPictureViewController.h */,
-				73A3AE821E6801D00041A3DD /* TDPictureViewController.m */,
-				73A3AE841E6801DE0041A3DD /* TDWordViewController.h */,
-				73A3AE851E6801DE0041A3DD /* TDWordViewController.m */,
-				73A3AE8A1E68088B0041A3DD /* TDVoiceViewController.h */,
-				73A3AE8B1E68088B0041A3DD /* TDVoiceViewController.m */,
+				73D70C641E70309400399895 /* TDTopicViewController.h */,
+				73D70C651E70309400399895 /* TDTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -637,27 +617,23 @@
 				73E4464C1E6853D700DBE46A /* TDTopic.m in Sources */,
 				737261BD1E27625300B2FA62 /* TDRecommendViewController.m in Sources */,
 				73751B421E6FF8BB00FBB320 /* NSDate+TDExtension.m in Sources */,
-				73A3AE861E6801DE0041A3DD /* TDWordViewController.m in Sources */,
 				7344CF4C1E59E3CD0018E9A2 /* TDPhoneLoginRegisterController.m in Sources */,
 				7317D8D91E1F771600173F8C /* UIView+TDFrameExtension.m in Sources */,
 				7317D8E21E1F8EC100173F8C /* TDNavigationController.m in Sources */,
 				7317D8D61E1F771600173F8C /* TDNewViewController.m in Sources */,
 				737261B41E2761A600B2FA62 /* TDRecommendCategory.m in Sources */,
-				73A3AE831E6801D00041A3DD /* TDPictureViewController.m in Sources */,
 				73751B371E6E8B4800FBB320 /* TDConst.m in Sources */,
 				7317D8D31E1F771600173F8C /* TDEssenceViewController.m in Sources */,
 				737261C91E2CBB7400B2FA62 /* TDRecommendUser.m in Sources */,
+				73D70C661E70309400399895 /* TDTopicViewController.m in Sources */,
 				7317D8D51E1F771600173F8C /* TDMeViewController.m in Sources */,
 				7317D8D81E1F771600173F8C /* UIBarButtonItem+TDExtension.m in Sources */,
 				73751B3B1E6EAB0B00FBB320 /* TDTopicCell.m in Sources */,
 				7317D8D71E1F771600173F8C /* AppDelegate.m in Sources */,
-				73E446491E680C4B00DBE46A /* TDRecViewController.m in Sources */,
 				7317D8DB1E1F771600173F8C /* main.m in Sources */,
-				73A3AE801E6801A10041A3DD /* TDVideoViewController.m in Sources */,
 				7317D8DA1E1F771600173F8C /* TDTabBarController.m in Sources */,
 				7317D8DC1E1F771600173F8C /* TDTabBar.m in Sources */,
 				737261B81E2761FB00B2FA62 /* TDRecommendCategoryCell.m in Sources */,
-				73A3AE8C1E68088B0041A3DD /* TDVoiceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

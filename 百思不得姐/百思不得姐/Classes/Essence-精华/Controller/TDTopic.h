@@ -4,9 +4,10 @@
 //
 //  Created by 蓝田 on 2017/3/2.
 //  Copyright © 2017年 蓝田. All rights reserved.
-//
 
-#import <Foundation/Foundation.h>
+// 帖子模型
+
+#import <UIKit/UIKit.h>
 
 @interface TDTopic : NSObject
 @property (nonatomic, copy) NSString *name;           // 用户名称
@@ -18,4 +19,5 @@
 @property (nonatomic, assign) NSInteger repost;       // 转发数
 @property (nonatomic, assign) NSInteger comment;      // 评论数
 @property (nonatomic, assign, getter=isSina_v) BOOL sina_v;  // 是否为新浪加V用户
+@property (nonatomic, assign, readonly) CGFloat cellHeight;  // cell的高度
 @end

@@ -9,7 +9,9 @@
 
 #import "TDTopic.h"
 
-@implementation TDTopic
+@implementation TDTopic{
+    CGFloat _cellHeight;
+}
 
 // 重写发帖时间
 - (NSString *)create_time{
@@ -41,6 +43,26 @@
         return _create_time;
     }
 }
+
+
+- (CGFloat)cellHeight{
+    if (!_cellHeight) {
+        
+        // 文字的最大尺寸
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * TDTopicCellMargin, MAXFLOAT);
+        
+        // 计算文字的高度
+        CGFloat textH = [self.text boundingRectWithSize:maxSize
+                                                options:NSStringDrawingUsesLineFragmentOrigin
+                                             attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]}
+                                                context:nil].size.height;
+        
+        // cell的高度
+        _cellHeight = TDTopicCellTextY + textH + TDTopicCellBottomBarH + 2 * TDTopicCellMargin;
+    }
+    return _cellHeight;
+}
+
 @end
 
 

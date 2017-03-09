@@ -18,7 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;             // 被踩数
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;           // 分享数
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;         // 评论数
-@property (weak, nonatomic) IBOutlet UIImageView *sinaVView;          // 新浪加V  
+@property (weak, nonatomic) IBOutlet UIImageView *sinaVView;          // 新浪加V
+@property (weak, nonatomic) IBOutlet UILabel *text_label;             // 帖子的文字内容
 @end
 
 @implementation TDTopicCell
@@ -52,6 +53,9 @@
     [self setupButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
+    
+    // 设置帖子的文字内容
+    self.text_label.text = topic.text;
 }
 
 // 如果数量大于1万,placeholder显示xx万； 如果数字大于0，placeholder显示实际数字；如果是其他情况，如等于0，直接显示placeholder

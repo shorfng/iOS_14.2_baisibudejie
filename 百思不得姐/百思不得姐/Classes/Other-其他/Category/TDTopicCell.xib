@@ -147,16 +147,25 @@
                             <constraint firstAttribute="height" constant="14" id="wLG-nk-s4d"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-NU-67D">
+                        <rect key="frame" x="18" y="63" width="292" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="2EO-97-LTw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="12i-ub-kMc"/>
                     <constraint firstItem="qw5-V0-dpx" firstAttribute="top" secondItem="s5d-fm-9zO" secondAttribute="top" id="13C-M6-JTZ"/>
                     <constraint firstAttribute="trailing" secondItem="BH0-Rp-vHG" secondAttribute="trailing" id="Bxt-Wc-jjw"/>
+                    <constraint firstItem="GPA-NU-67D" firstAttribute="trailing" secondItem="qw5-V0-dpx" secondAttribute="trailing" id="CdZ-Ah-35s"/>
                     <constraint firstItem="s5d-fm-9zO" firstAttribute="leading" secondItem="2EO-97-LTw" secondAttribute="trailing" constant="10" id="CxG-1R-b64"/>
+                    <constraint firstItem="GPA-NU-67D" firstAttribute="top" secondItem="2EO-97-LTw" secondAttribute="bottom" constant="10" id="ICr-Zl-b4P"/>
                     <constraint firstAttribute="trailing" secondItem="qw5-V0-dpx" secondAttribute="trailing" constant="10" id="OUH-B4-9oy"/>
                     <constraint firstAttribute="trailing" secondItem="8m8-Ld-onL" secondAttribute="trailing" id="PBd-Vl-pCt"/>
                     <constraint firstItem="8m8-Ld-onL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Pd3-3h-lNh"/>
                     <constraint firstAttribute="bottom" secondItem="8m8-Ld-onL" secondAttribute="bottom" id="QBX-tV-YFw"/>
+                    <constraint firstItem="GPA-NU-67D" firstAttribute="leading" secondItem="2EO-97-LTw" secondAttribute="leading" id="aMI-0v-IAr"/>
                     <constraint firstItem="aoA-ds-iE4" firstAttribute="trailing" secondItem="2EO-97-LTw" secondAttribute="trailing" constant="5" id="aOd-R1-8L7"/>
                     <constraint firstItem="8m8-Ld-onL" firstAttribute="top" secondItem="BH0-Rp-vHG" secondAttribute="bottom" id="f3y-db-5mb"/>
                     <constraint firstItem="aoA-ds-iE4" firstAttribute="bottom" secondItem="2EO-97-LTw" secondAttribute="bottom" constant="5" id="hCR-76-plu"/>
@@ -176,6 +185,7 @@
                 <outlet property="profileImageView" destination="2EO-97-LTw" id="DjD-ka-PkP"/>
                 <outlet property="shareButton" destination="mXu-Hz-cIr" id="I1c-zb-AAq"/>
                 <outlet property="sinaVView" destination="aoA-ds-iE4" id="S4N-uT-k6Y"/>
+                <outlet property="text_label" destination="GPA-NU-67D" id="GQp-kN-8Js"/>
             </connections>
             <point key="canvasLocation" x="38" y="114.5"/>
         </tableViewCell>

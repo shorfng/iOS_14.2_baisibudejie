@@ -1,12 +1,12 @@
 //
-//  TDWordViewController.m
+//  TDTopicViewController.m
 //  百思不得姐
 //
-//  Created by 蓝田 on 2017/3/2.
+//  Created by 蓝田 on 2017/3/8.
 //  Copyright © 2017年 蓝田. All rights reserved.
 //
 
-#import "TDWordViewController.h"
+#import "TDTopicViewController.h"
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import "TDTopic.h"
@@ -14,14 +14,14 @@
 #import <MJRefresh.h>
 #import "TDTopicCell.h"  // cell的xib
 
-@interface TDWordViewController ()
+@interface TDTopicViewController ()
 @property (nonatomic, strong) NSMutableArray *topics;  // 帖子数据
 @property (nonatomic, assign) NSInteger page;          // 当前页码
 @property (nonatomic, copy) NSString *maxtime;         // 当加载下一页数据时需要这个参数
 @property (nonatomic, strong) NSDictionary *params;    // 上一次的请求参数
 @end
 
-@implementation TDWordViewController
+@implementation TDTopicViewController
 
 - (NSMutableArray *)topics{
     if (!_topics) {
@@ -86,7 +86,7 @@ static NSString * const TDTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     self.params = params;
     
     // 发送请求
@@ -127,7 +127,7 @@ static NSString * const TDTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     NSInteger page = self.page + 1;
     params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
@@ -181,7 +181,11 @@ static NSString * const TDTopicCellId = @"topic";
 
 #pragma mark - tableView 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    // 取出帖子模型
+    TDTopic *topic = self.topics[indexPath.row];
+
+    // 返回这个模型对应的cell高度
+    return topic.cellHeight;
 }
 
 - (void)didReceiveMemoryWarning {
